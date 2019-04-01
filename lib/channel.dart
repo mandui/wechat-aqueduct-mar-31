@@ -19,7 +19,7 @@ class RoutePlayHostChannel extends ApplicationChannel {
 
     router
       .route("/*")
-      .link(() => FileController("lib/pages/app/"));
+      .link(() => FileController("lib/pages/fool_day/"));
 
     return router;
   }

@@ -10,6 +10,8 @@ class WechatApis extends ResourceController {
   Future<Response> api() async {
     final api = request.path.variables['api'];
 
+    print("just checkout print function works");
+
     switch (api) {
       case "access_token":
         return _getAccessToken();

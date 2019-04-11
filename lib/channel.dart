@@ -10,6 +10,7 @@ class RoutePlayHostChannel extends ApplicationChannel {
   @override
   Future prepare() async {
     logger.onRecord.listen((rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
+    _updateAccessToken();
     Timer.periodic(Duration(seconds: 5400), (Timer t) => _updateAccessToken());
   }
 

@@ -48,8 +48,10 @@ class RoutePlayHostChannel extends ApplicationChannel {
        for (String key in data.keys) {
          print("key: $key");
          print("value: ${data[key]}");
+         logger.log(Level.SEVERE, "key: $key");
+         logger.log(Level.SEVERE, "value: ${data[key]}");
        }
-       final token = data["access_token"] as String;
+       final token = await data["access_token"] as String;
        print("token: $token");
        if (token != null) {
          store.accessToken = token;

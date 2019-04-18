@@ -10,8 +10,8 @@ class RoutePlayHostChannel extends ApplicationChannel {
   @override
   Future prepare() async {
     logger.onRecord.listen((rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
-    _updateAccessToken();
-    Timer.periodic(Duration(seconds: 5400), (Timer t) => _updateAccessToken());
+    //_updateAccessToken();
+    //Timer.periodic(Duration(seconds: 5400), (Timer t) => _updateAccessToken());
   }
 
   @override
@@ -24,9 +24,12 @@ class RoutePlayHostChannel extends ApplicationChannel {
         return Response.ok({"key": "value"});
       });
 
-    router
+    router.route("/wechat/*")
+      .link(() => FileController("/lib/file/"));
+
+    /*router
       .route("/wechat/[:api]")
-      .link(() => WechatApis());
+      .link(() => WechatApis());*/
 
     router
       .route("/wechat/app/*")

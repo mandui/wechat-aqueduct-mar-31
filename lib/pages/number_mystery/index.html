@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字谜</title>
+    <link rel="stylesheet" href="styles/bulma.css">
+    <link rel="stylesheet" href="my_styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="title">输入一个你喜欢的四位数</div>
+        <input id="digit-input" type="number" pattern="\d{4}"/>
+        <div class="title"></div>
+        <div class="title">或者 你想掷一下骰子</div>
+        <div class="title"></div>
+
+        <button id="btn-trivia" class="button is-info">数字琐事</button>
+        <button id="btn-year" class="button is-info">世界那年</button>
+        <button id="btn-day" class="button is-info">世界那天</button>
+        <button id="btn-math" class="button is-info">数学事实</button>
+    </div>
+
+    <div class="result-section">
+        <ul id="result-list">
+
+        </ul>
+    </div>
+
+</body>
+</html>

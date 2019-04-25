@@ -35,7 +35,7 @@ class RoutePlayHostChannel extends ApplicationChannel {
       .route("/wechat/app/*")
       .link(() => FileController("lib/pages/april_4th/"));
 	
-    router.route("/wechat/fun/highlight/*")
+    router.route("/fun/highlight/*")
       .link(() => FileController("lib/pages/highlight/"));
 
     router.route("/fun/number_mystery/*")
